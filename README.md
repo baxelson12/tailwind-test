@@ -1,27 +1,67 @@
-# TailwindTest
+## Do NOT push to or fork this repo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+Clone this repository, and create your own based on it.
 
-## Development server
+### Goal:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Create a standalone component that lists the provided data and allows the client to view in either a 'list' view, or a 'grid' view.
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Requirements:
 
-## Build
+- The grid/row items must match the design at https://www.figma.com/file/27pUiH9CXEgXka5AR1WUCt/Front-End-Angular-Test?node-id=0%3A1 (The actions for the item are not important)
+- Designs are expected to be near pixel perfect
+- The component(s) must accept an input of Product[]
+- The component(s) must output the clicked item
+- The component(s) must be visually appealing
+- The component(s) must be responsive
+- The component(s) must utilize NgRx
+- The component(s) must utilize TailwindCSS
+- SVGs should be displayed using ```<svg-icon></svg-icon>```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### Rules:
 
-## Running unit tests
+- Must utilize the files and dependencies already included.
+- No additional libraries are to be installed.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+### Further Information
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Models
 
-## Further help
+```typescript
+export interface Product {
+  // Expected value: 1
+  productId: string;
+  // Expected value: http://...
+  imagePath: string;
+  // Expected value: 4.9
+  rating: number;
+  // Expected value: 99
+  percentage: number;
+  // Expected value: 1.2K
+  tags: string;
+  // Expected value: Xiaomi Wifi Extender
+  title: string;
+  // Expected value: 12.00
+  price: number;
+  // Expected value: true
+  ePacket: boolean;
+  // Expected value: new Date()
+  createdAt: Date;
+}
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+#### Expected time:
+
+1.5 hours.
+
+---
+
+#### Submission instructions:
+
+- Deploy the application to Netlify
+- Send us a link to the repo, along with the netlify link. No further action is required.
